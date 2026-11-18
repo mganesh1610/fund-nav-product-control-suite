@@ -1,0 +1,56 @@
+{
+  "provenance": {
+    "treasury_2024_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page&_format=csv",
+    "treasury_2024_sha256": "6775840b76cd7fd41121f61d6f6c60184eca6b2ba49954ec7372c463cbeef34d",
+    "treasury_2025_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2025/all?type=daily_treasury_yield_curve&field_tdr_date_value=2025&page&_format=csv",
+    "treasury_2025_sha256": "cf2fa3da7f160384b63d2ead698532b1d76cd9f789ce4911e2304db85b14e6d5",
+    "ecb_fx_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip",
+    "ecb_fx_sha256": "d3510cea39193a817380796d02d0cdf2ec492d4f3e18fe7ddb7383b15e043db5",
+    "ecb_historical_dates": 7138,
+    "ecb_non_null_fx_observations": 222050,
+    "aligned_2024_2025_trading_days": 493
+  },
+  "fund_accounting_metrics": {
+    "funds_modeled": 4,
+    "monthly_close_packages": 96,
+    "quarterly_reporting_packages": 32,
+    "investor_capital_statements_generated": 384,
+    "distinct_lp_gp_accounts": 16,
+    "final_period_combined_fund_nav_usd": 213348894.49,
+    "nav_rollforward_max_variance_usd": 0.0,
+    "investor_waterfall_to_nav_variance_usd": 0.0,
+    "asset_management_policy_breaches": 0
+  },
+  "product_controllers_metrics": {
+    "trading_desks": 4,
+    "multi_currency_positions": 6,
+    "daily_position_valuations": 2952,
+    "pnl_attribution_explained_ratio_pct": 99.91,
+    "pnl_decomposition_max_variance_usd": 0.0,
+    "ipv_stale_mark_exceptions_intercepted": 32,
+    "ipv_unremediated_gl_breaches": 0,
+    "cumulative_ipv_valuation_adjustments_usd": 922275.58,
+    "peak_portfolio_dv01_usd": 67975.99
+  },
+  "internal_control_gates": {
+    "passed": 14,
+    "total": 14,
+    "pass_rate_pct": 100.0,
+    "details": {
+      "gate_01_treasury_2024_sha256_verified": true,
+      "gate_02_treasury_2025_ingested": true,
+      "gate_03_ecb_fx_multi_currency_ingested": true,
+      "gate_04_24_monthly_close_cycles_complete": true,
+      "gate_05_8_quarterly_packages_tagged": true,
+      "gate_06_fund_nav_rollforward_zero_drift": true,
+      "gate_07_investor_capital_to_fund_nav_zero_variance": true,
+      "gate_08_usd_base_fund_zero_fx_translation": true,
+      "gate_09_asset_management_policy_controls_100pct": true,
+      "gate_10_daily_pnl_attribution_conservation": true,
+      "gate_11_ipv_stale_marks_100pct_adjusted_to_gl": true,
+      "gate_12_dv01_interest_rate_risk_within_limit": true,
+      "gate_13_excel_close_package_generated": true,
+      "gate_14_sqlite_integrity_ok": true
+    }
+  }
+}

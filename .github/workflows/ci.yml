@@ -1,0 +1,21 @@
+name: Controllers Fund NAV & Product Control CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-controllers-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Execute Fund Accounting & Product Control Pipeline + Unit Tests
+        run: |
+          python3 src/fund_nav_and_pnl_engine.py
+          python3 -m unittest discover -s tests -v
